@@ -72,6 +72,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         bindView();
         createSQL();
+        testMap();
+    }
+    private void testMap(){
+        List<Plant> plantList = Plant.getAllPlants();
+        for (Plant p : plantList){
+            Log.d("map", "testMap: "+ p.getName()+ "" + p.getLat() + "||" + p.getLng());
+        }
     }
 
     @Override
